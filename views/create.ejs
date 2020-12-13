@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include("./partials/head.ejs") %>
+
+<body>
+
+  <!-- Nav -->
+  <%- include("./partials/nav.ejs")  %>
+
+  <div class="create-blog content">
+    <form action="/blogs" method="POST">
+      <label for="title">Blog Title : </label>
+      <input type="text" id="title" name="title" required autocomplete="off" />
+      <label for="snippet">Blog Snippet : </label>
+      <input type="text" id="snippet" name="snippet" required autocomplete="off" />
+      <label for="body">Blog Body : </label>
+      <textarea type="text" id="body" name="body" required autocomplete="off"> </textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>
